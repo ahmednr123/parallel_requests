@@ -1,0 +1,18 @@
+Starting Test
+
+Thread:[15] Timetaken: 53ms, (Started at: 17ms Ended at: 70ms)
+{"reply":true,"message": "this is a message from thread", "timestamp": "2019-10-07 18:49:30.798"}
+
+Thread:[13] Timetaken: 53ms, (Started at: 17ms Ended at: 70ms)
+{"reply":true,"message": "this is a message from thread", "timestamp": "2019-10-07 18:49:30.797"}
+
+Thread:[12] Timetaken: 69ms, (Started at: 17ms Ended at: 86ms)
+{"reply":true,"message": "this is a message from thread", "timestamp": "2019-10-07 18:49:30.800"}
+
+Thread:[14] Timetaken: 71ms, (Started at: 17ms Ended at: 88ms)
+{"reply":true,"message": "this is a message from thread", "timestamp": "2019-10-07 18:49:30.796"}
+
+Thread:[16] Timetaken: 71ms, (Started at: 17ms Ended at: 88ms)
+{"reply":true,"message": "this is a message from thread", "timestamp": "2019-10-07 18:49:30.799"}
+
+[Total time: 88ms]

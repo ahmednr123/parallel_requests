@@ -1,0 +1,6 @@
+Starting Test
+
+Thread:[12] Timetaken: 29ms, (Started at: 17ms Ended at: 46ms)
+{"reply":true,"message": "this is a message from thread", "timestamp": "2019-10-07 18:49:42.974"}
+
+[Total time: 53ms]

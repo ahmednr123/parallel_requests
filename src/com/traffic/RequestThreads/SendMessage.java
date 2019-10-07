@@ -17,7 +17,7 @@ public class SendMessage implements RequestThread {
     }
 
     public void execute () {
-        RequestRunner runner = new RequestRunner("SendMessageTest", 100);
+        RequestRunner runner = new RequestRunner("SendMessageTest", 1);
         HttpConfig config = new HttpConfig();
         config.url = "http://localhost:8080/ChatApp/message";
         config.method = "POST";
