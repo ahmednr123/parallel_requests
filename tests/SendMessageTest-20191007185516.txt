@@ -1,0 +1,9 @@
+Starting Test
+
+Thread:[12] Timetaken: 30ms, (Started at: 16ms Ended at: 46ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:16.694"}
+
+Thread:[13] Timetaken: 30ms, (Started at: 16ms Ended at: 46ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:16.694"}
+
+[Total time: 53ms]

@@ -1,0 +1,33 @@
+Starting Test
+
+Thread:[19] Timetaken: 62ms, (Started at: 17ms Ended at: 79ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.012"}
+
+Thread:[14] Timetaken: 55ms, (Started at: 22ms Ended at: 77ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.014"}
+
+Thread:[18] Timetaken: 60ms, (Started at: 17ms Ended at: 77ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.010"}
+
+Thread:[16] Timetaken: 66ms, (Started at: 20ms Ended at: 86ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.013"}
+
+Thread:[21] Timetaken: 72ms, (Started at: 15ms Ended at: 87ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.008"}
+
+Thread:[20] Timetaken: 73ms, (Started at: 15ms Ended at: 88ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.009"}
+
+Thread:[17] Timetaken: 69ms, (Started at: 19ms Ended at: 88ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.013"}
+
+Thread:[12] Timetaken: 72ms, (Started at: 23ms Ended at: 95ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.014"}
+
+Thread:[13] Timetaken: 81ms, (Started at: 15ms Ended at: 96ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.006"}
+
+Thread:[15] Timetaken: 78ms, (Started at: 21ms Ended at: 99ms)
+{"reply":true,"message": "more messages", "timestamp": "2019-10-07 18:55:05.013"}
+
+[Total time: 100ms]

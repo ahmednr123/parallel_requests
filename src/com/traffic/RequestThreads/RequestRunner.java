@@ -59,7 +59,7 @@ public class RequestRunner {
         String file_name = test_name + "-" + formatter.format(date);
 
         try {
-            FileWriter fw = new FileWriter("./" + file_name + ".txt");
+            FileWriter fw = new FileWriter("./tests/" + file_name + ".txt");
             fw.write(this.output);
             fw.close();
             System.out.println("Written to file: " + file_name + ".txt");
