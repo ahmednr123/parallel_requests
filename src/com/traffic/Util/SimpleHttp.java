@@ -23,6 +23,8 @@ public class SimpleHttp {
         return request(method, URL, parameters, null);
     }
 
+    // Respond with structured data maybe a class
+    // with responseCode, extraData(depening upon the responseCode) and body
     public
     static String request (String method, String URL, Map<String, String> parameters, String Cookie)
             throws IOException, JSONException
