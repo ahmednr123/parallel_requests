@@ -1,0 +1,12 @@
+Starting Test
+
+Thread:[12] Timetaken: 58ms, (Started at: 17ms Ended at: 75ms)
+{"reply":true,"message": "3 asynchronous messages", "timestamp": "2019-10-08 11:55:10.802"}
+
+Thread:[13] Timetaken: 65ms, (Started at: 17ms Ended at: 82ms)
+{"reply":true,"message": "3 asynchronous messages", "timestamp": "2019-10-08 11:55:10.803"}
+
+Thread:[14] Timetaken: 72ms, (Started at: 17ms Ended at: 89ms)
+{"reply":true,"message": "3 asynchronous messages", "timestamp": "2019-10-08 11:55:10.798"}
+
+[Total time: 89ms]

@@ -53,7 +53,7 @@ public class RequestRunner {
         saveLogFile();
     }
 
-    void saveLogFile () {
+    private void saveLogFile () {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
         String file_name = test_name + "-" + formatter.format(date);

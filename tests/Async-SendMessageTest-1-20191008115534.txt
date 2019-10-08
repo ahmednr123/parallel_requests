@@ -1,0 +1,6 @@
+Starting Test
+
+Thread:[12] Timetaken: 29ms, (Started at: 17ms Ended at: 46ms)
+{"reply":true,"message": "1 asynchronous messages", "timestamp": "2019-10-08 11:55:34.929"}
+
+[Total time: 54ms]
