@@ -1,5 +1,6 @@
 package com.traffic.RequestThreads;
 
+import com.traffic.Util.SimpleHttp;
 import org.json.xjson.XJSONObject;
 
 import java.util.Map;
@@ -8,7 +9,7 @@ public class HttpConfig {
     public String url;
     public String method;
     public Map<String, String> reqParameters;
-    public String cookie;
+    public SimpleHttp httpClient;
 
     public
     HttpConfig () {
@@ -21,10 +22,10 @@ public class HttpConfig {
     }
 
     public
-    HttpConfig (String url, String method, Map<String, String> reqParameters, String cookie) {
+    HttpConfig (String url, String method, Map<String, String> reqParameters, SimpleHttp httpClient) {
         this.url = url;
         this.method = method;
         this.reqParameters = reqParameters;
-        this.cookie = cookie;
+        this.httpClient = httpClient;
     }
 }

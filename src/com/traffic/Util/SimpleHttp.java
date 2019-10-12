@@ -1,5 +1,6 @@
 package com.traffic.Util;
 
+import com.traffic.RequestThreads.LoginStrategy;
 import org.json.JSONException;
 
 import java.io.*;
@@ -9,24 +10,34 @@ import java.net.URLEncoder;
 import java.util.*;
 
 public class SimpleHttp {
-    public
-    static String request (String method, String URL)
-            throws IOException, JSONException
-    {
-        return request(method, URL, null, null);
+    LoginStrategy loginStrategy;
+    String cookie = null;
+
+    public SimpleHttp () { }
+
+    public SimpleHttp (LoginStrategy loginStrategy) {
+        if (loginStrategy != null) {
+            this.loginStrategy = loginStrategy;
+            try {
+                request(loginStrategy.getMethod(), loginStrategy.getUrl(), loginStrategy.getParameters());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 
     public
-    static String request (String method, String URL, Map<String, String> parameters)
+    String request (String method, String URL)
             throws IOException, JSONException
     {
-        return request(method, URL, parameters, null);
+        return request(method, URL, null);
     }
 
     // Respond with structured data maybe a class
     // with responseCode, extraData(depening upon the responseCode) and body
     public
-    static String request (String method, String URL, Map<String, String> parameters, String Cookie)
+    String request (String method, String URL, Map<String, String> parameters)
             throws IOException, JSONException
     {
         String str, jsonString = "";
@@ -36,8 +47,8 @@ public class SimpleHttp {
         connection.setConnectTimeout(5000);
         connection.setInstanceFollowRedirects(false);
 
-        if (Cookie != null)
-            connection.setRequestProperty("Cookie", Cookie);
+        if (cookie != null)
+            connection.setRequestProperty("Cookie", cookie);
 
         if (parameters != null) {
             //Send data with request
@@ -51,14 +62,8 @@ public class SimpleHttp {
             request.close();
         }
 
-        // JUST FOR LOGIN.
-        // NOT REUSABLE FOR ALL APPLICATIONS.
-        if (connection.getResponseCode() == 302) {
-            if ("/ChatApp/chat_app.html".equals(connection.getHeaderField("Location"))) {
-                return connection.getHeaderField("Set-Cookie").split(";")[0];
-            } else {
-                return null;
-            }
+        if (loginStrategy != null && cookie == null) {
+            cookie = loginStrategy.saveSession(connection);
         }
 
         InputStream response;

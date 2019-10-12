@@ -1,27 +1,29 @@
 package com.traffic.RequestThreads;
 
+import com.traffic.Util.SimpleHttp;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class SendMessage implements RequestThread {
 
-    private String cookie;
     private String chat_id;
     private String message;
 
     public
-    SendMessage (String cookie, String chat_id, String message) {
-        this.cookie = cookie;
+    SendMessage (String chat_id, String message) {
         this.chat_id = chat_id;
         this.message = message;
     }
 
     public void execute () {
         RequestRunner runner = new RequestRunner("SendMessageTest-300", 300);
+        SimpleHttp httpClient = new SimpleHttp(new LoginSession());
+
         HttpConfig config = new HttpConfig();
         config.url = "http://localhost:8080/ChatApp/message";
         config.method = "POST";
-        config.cookie = cookie;
+        config.httpClient = httpClient;
 
         Map<String,String> parameters = new HashMap<>();
         parameters.put("chat_id", chat_id);

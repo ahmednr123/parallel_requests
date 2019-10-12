@@ -1,26 +1,28 @@
 package com.traffic.RequestThreads;
 
+import com.traffic.Util.SimpleHttp;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class GetMessages implements RequestThread {
-    private String cookie;
     private String chat_id;
     private String type;
 
     public
-    GetMessages (String cookie, String chat_id, String type) {
-        this.cookie = cookie;
+    GetMessages (String chat_id, String type) {
         this.chat_id = chat_id;
         this.type = type;
     }
 
     public void execute () {
-        RequestRunner runner = new RequestRunner("GetMessagesTest-300", 300);
+        RequestRunner runner = new RequestRunner("GetMessagesTest-300", 1);
+        SimpleHttp httpClient = new SimpleHttp(new LoginSession());
+
         HttpConfig config = new HttpConfig();
         config.url = "http://localhost:8080/ChatApp/messages";
         config.method = "GET";
-        config.cookie = cookie;
+        config.httpClient = httpClient;
 
         Map<String,String> parameters = new HashMap<>();
         parameters.put("chat_id", chat_id);

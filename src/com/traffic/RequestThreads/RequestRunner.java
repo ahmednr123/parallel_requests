@@ -16,7 +16,6 @@ public class RequestRunner {
     public int threads = 2;
     public long startTime;
     public String output = "";
-    public int threads_completed = 0;
     public static ArrayList<XJSONObject> requests = new ArrayList<>();
     public CountDownLatch latch = null;
 

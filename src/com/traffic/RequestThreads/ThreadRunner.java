@@ -21,7 +21,7 @@ public class ThreadRunner implements Runnable {
         long startTime = System.currentTimeMillis();
 
         try {
-            resp = SimpleHttp.request(config.method, config.url, config.reqParameters, config.cookie);
+            resp = config.httpClient.request(config.method, config.url, config.reqParameters);
         } catch (Exception e) {
             System.out.println ("Exception is caught");
         } finally {
