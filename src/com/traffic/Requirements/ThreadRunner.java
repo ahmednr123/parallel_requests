@@ -1,6 +1,5 @@
-package com.traffic.RequestThreads;
+package com.traffic.Requirements;
 
-import com.traffic.Util.SimpleHttp;
 import org.json.xjson.XJSONException;
 import org.json.xjson.XJSONObject;
 

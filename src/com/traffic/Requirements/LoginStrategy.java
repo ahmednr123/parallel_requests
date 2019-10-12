@@ -1,4 +1,4 @@
-package com.traffic.RequestThreads;
+package com.traffic.Requirements;
 
 import java.net.HttpURLConnection;
 import java.util.Map;

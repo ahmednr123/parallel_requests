@@ -1,6 +1,6 @@
 package com.traffic.Util;
 
-import com.traffic.RequestThreads.LoginStrategy;
+import com.traffic.Requirements.LoginStrategy;
 import org.json.JSONException;
 
 import java.io.*;
