@@ -21,7 +21,7 @@ public class SendMessage implements RequestThread {
     }
 
     public void execute () {
-        RequestRunner runner = new RequestRunner("SendMessageTest-300", 300);
+        RequestRunner runner = new RequestRunner("SendMessageTest-300", 2);
         SimpleHttp httpClient = new SimpleHttp(new LoginSession());
 
         HttpConfig config = new HttpConfig();
