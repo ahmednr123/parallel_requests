@@ -1,6 +1,6 @@
 package com.traffic.Requirements;
 
-import org.json.xjson.XJSONObject;
+import org.json.JSONObject;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,7 +16,7 @@ public class RequestRunner {
     public int threads = 2;
     public long startTime;
     public String output = "";
-    public static ArrayList<XJSONObject> requests = new ArrayList<>();
+    public static ArrayList<JSONObject> requests = new ArrayList<>();
     public CountDownLatch latch = null;
 
     private String test_name;
